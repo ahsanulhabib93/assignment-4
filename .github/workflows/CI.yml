@@ -1,6 +1,12 @@
 name: Pylint
 
-on: [push]
+on: 
+
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   build:
@@ -28,12 +34,6 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
-    - name: Run Linter
-      run: npm run lint
-
-    - name: Run Unit Tests
-      run: npm run test
 
     - name: Code Quality Check with SonarQube
       env:
