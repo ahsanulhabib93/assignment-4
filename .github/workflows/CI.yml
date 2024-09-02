@@ -1,4 +1,4 @@
-name: Pylint
+name: CI
 
 on: 
 
@@ -56,8 +56,8 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
+        git config --global user.ahsanulhabib93 'github-actions'
+        git config --global user.ahsanulhabib1993@gmail.com 'github-actions@github.com'
 
     - name: Merge into dev
       run: |
